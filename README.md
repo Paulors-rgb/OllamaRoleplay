@@ -189,7 +189,7 @@ OllamaRoleplay/
 ## 👨‍💻 Développement
 
 ### Développé par
-**Luis**
+**PauloR Sl33pytech**
 
 ### Assisté par
 **Claude (Anthropic)** - Assistant IA pour le développement, architecture et debugging

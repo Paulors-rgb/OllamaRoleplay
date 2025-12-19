@@ -267,7 +267,7 @@ public partial class MainWindow : Window
         if (_selectedCharacter == null) return;
 
         _selectedCharacter.Name = CharNameBox.Text ?? (_currentLang == "fr" ? "Sans nom" : "Unnamed");
-        _selectedCharacter.Age = int.TryParse(CharAgeBox.Text, out var age) ? age : 25;
+        _selectedCharacter.Age = int.TryParse(CharAgeBox.Text, out var age) ? Math.Max(18, age) : 18; // Minimum 18 ans
         _selectedCharacter.Language = CharLanguageBox.Text ?? (_currentLang == "fr" ? "Français" : "English");
         _selectedCharacter.Description = CharDescBox.Text ?? "";
         _selectedCharacter.Likes = CharLikesBox.Text ?? "";

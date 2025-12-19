@@ -6,6 +6,16 @@ Une application Windows de roleplay conversationnel avec des personnages IA, inc
 ![WPF](https://img.shields.io/badge/WPF-Windows-0078D6?logo=windows)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+---
+
+## ⚠️ Avertissement
+
+**Cette application est destinée à un public adulte (18+).**
+
+L'utilisateur est seul responsable de l'utilisation qu'il fait de ce logiciel et des contenus générés par les modèles IA. Les personnages créés doivent avoir au minimum 18 ans.
+
+---
+
 ## 🌟 Fonctionnalités
 
 - **🤖 Chat IA Local** - Conversations avec des modèles Ollama (Llama, Mistral, etc.)
@@ -96,7 +106,7 @@ pip install openvoice-cli melo-tts faster-whisper fastapi uvicorn python-multipa
 
 ### 4. Télécharger les modèles OpenVoice
 ```bash
-# Cloner OpenVoice dans D:\lm\OpenVoice (ou votre chemin préféré)
+# Cloner OpenVoice (ou télécharger les checkpoints)
 git clone https://github.com/myshell-ai/OpenVoice.git
 # Les checkpoints seront téléchargés automatiquement au premier lancement
 ```
@@ -112,23 +122,19 @@ ollama serve
 
 **Terminal 2 - TTS (OpenVoice) :**
 ```bash
-D:\lm\OpenVoice\run-api.bat
-# Ou manuellement :
+# Utiliser le script fourni ou manuellement :
 conda activate openvoice
-python tts_api.py
+python PythonAPIs/tts_api.py
 ```
 
 **Terminal 3 - STT (Whisper) :**
 ```bash
-D:\lm\OpenVoice\run-stt.bat
-# Ou manuellement :
 conda activate openvoice
-python stt_api.py
+python PythonAPIs/stt_api.py
 ```
 
 **Terminal 4 - Application :**
 ```bash
-cd D:\programming\LLMCHAT\OllamaRoleplay
 dotnet run -c Release
 ```
 
@@ -155,11 +161,9 @@ OllamaRoleplay/
 │   └── CharacterService.cs   # Gestion des personnages
 ├── Views/
 │   └── MainWindow.xaml(.cs)  # Interface principale
-├── Data/
-│   ├── Characters/           # Fichiers personnages (JSON)
-│   ├── Conversations/        # Historiques (chiffrés)
-│   ├── Audio/                # Fichiers audio générés
-│   └── VoiceSamples/         # Échantillons vocaux
+├── PythonAPIs/
+│   ├── tts_api.py            # API OpenVoice TTS
+│   └── stt_api.py            # API Whisper STT
 └── App.xaml(.cs)             # Point d'entrée
 ```
 
@@ -168,7 +172,7 @@ OllamaRoleplay/
 1. Cliquez sur **➕** dans la section Personnages
 2. Remplissez les informations :
    - **Nom** : Le nom du personnage
-   - **Âge** : Son âge
+   - **Âge** : Son âge (minimum 18 ans)
    - **Genre** : Male/Female
    - **Description** : Apparence physique
    - **Personnalité** : Traits de caractère
@@ -185,14 +189,13 @@ OllamaRoleplay/
 ## 👨‍💻 Développement
 
 ### Développé par
-**Paulo R. Sl33pytech** - Développeur principal
+**Luis**
 
 ### Assisté par
 **Claude (Anthropic)** - Assistant IA pour le développement, architecture et debugging
 
 ### Outils de développement
 - Visual Studio 2022 / VS Code
-- JetBrains Rider
 - .NET 8 SDK
 - Conda / Miniconda
 

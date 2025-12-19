@@ -120,8 +120,8 @@
                                     <TextBox x:Name="CharNameBox" Style="{StaticResource ModernTextBox}" FontSize="11" Padding="6,4"/>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2">
-                                    <TextBlock x:Name="LblAge" Text="Âge" Foreground="{StaticResource TextSecondaryBrush}" FontSize="10"/>
-                                    <TextBox x:Name="CharAgeBox" Style="{StaticResource ModernTextBox}" FontSize="11" Padding="6,4"/>
+                                    <TextBlock x:Name="LblAge" Text="Âge (18+)" Foreground="{StaticResource TextSecondaryBrush}" FontSize="10"/>
+                                    <TextBox x:Name="CharAgeBox" Style="{StaticResource ModernTextBox}" FontSize="11" Padding="6,4" Text="18" ToolTip="Minimum 18 ans"/>
                                 </StackPanel>
                                 <StackPanel Grid.Column="4">
                                     <TextBlock x:Name="LblGender" Text="Sexe" Foreground="{StaticResource TextSecondaryBrush}" FontSize="10"/>

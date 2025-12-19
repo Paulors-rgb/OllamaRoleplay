@@ -87,7 +87,7 @@ L'utilisateur est seul responsable de l'utilisation qu'il fait de ce logiciel et
 
 ### 1. Cloner le repository
 ```bash
-git clone https://github.com/VOTRE_USERNAME/OllamaRoleplay.git
+git clone https://github.com/Paulors-rgb/OllamaRoleplay.git
 cd OllamaRoleplay
 ```
 
